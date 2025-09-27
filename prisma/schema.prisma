@@ -9,7 +9,7 @@ datasource db {
 }
 
 model bazaar_items {
-  id           Int          @id(map: "items_pkey") @unique(map: "items_id_key") @default(autoincrement())
+  id           Int          @id(map: "items_pkey") @default(autoincrement())
   name         String
   image        String
   price        Int
@@ -59,7 +59,7 @@ model bazaar_transactions {
 }
 
 model bazaar_users {
-  id                                                      Int               @id(map: "users_pkey") @unique(map: "users_id_key") @default(autoincrement())
+  id                                                      Int               @id(map: "users_pkey") @default(autoincrement())
   firstName                                               String
   lastName                                                String
   username                                                String            @unique(map: "users_username_key")
